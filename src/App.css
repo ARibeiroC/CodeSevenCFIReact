@@ -1,0 +1,7 @@
+.App {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-purple);
+    min-height: 100vh;
+}

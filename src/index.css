@@ -1,0 +1,22 @@
+:root {
+  --color-purple: #5C0BA3;
+  --color-pink: #D70AC1;
+  --color-ice: #f0f0f0;
+  --color-lightgray: #ccc;
+  --color-darkblue: #110e2d;
+  --color-darkgray: #222;
+  --color-default: rgb(17, 17, 17);
+  --color-warning: #FFF3CD;
+  --color-discord: #5865F2;
+  --color-whatsapp: #00E676;
+  --color-outlook: #0078D4;
+  --color-attention: #ff2222;
+  --header-height: 10%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+}
