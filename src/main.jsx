@@ -7,7 +7,7 @@ import { FormSign } from './routes/FormSign.jsx'
 import { ErrorPage } from './routes/ErrorPage.jsx'
 import { Home } from './routes/Home.jsx'
 
-const raiz = '/react_codeseven_cfi'
+const raiz = '/CodeSevenCFIReact'
 
 const router = createBrowserRouter([
   {

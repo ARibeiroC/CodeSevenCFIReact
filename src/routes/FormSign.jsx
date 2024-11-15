@@ -20,7 +20,7 @@ export function FormSign(){
                 </div>
             </div>
             <div id="form-sign">
-                <SignIn />
+                <SignUp />
             </div>
         </div>
     )
