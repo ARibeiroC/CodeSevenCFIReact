@@ -26,11 +26,11 @@
 - [ ] Criação de um token exclusivo para o usuário ao acessar a página pela primeira vez.
 
 ## FEATURES
-- [ ] Validação dos caracteres inseridos no input de matricula para apenas números.
+- [X] Validação dos caracteres inseridos no input de matricula para apenas números.
 - [ ] Armazenamento do token no Local Storage;
-- [ ] Autenticação de usuário via número da matricula e senha;
+- [X] Autenticação de usuário via número da matricula e senha;
 - [ ] Cadastro do usuário no banco de dados;
-- [ ] troca dinâmica dos formulários de login e cadastro;
+- [X] troca dinâmica dos formulários de login e cadastro;
 - [ ] Authenticação de acesso a sessão do candidado caso o usuário já tenha acessado antes;
 - [ ] Sistema de logout
 - [ ] Limpeza do token ao fazer logout do sistema;
