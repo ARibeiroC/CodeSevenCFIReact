@@ -9,6 +9,12 @@
 
 # ETAPAS
 
+### Elaboração do Design
+- [X] Tela do Login
+- [X] Tela de Cadastro
+- [ ] Tela de acesso (HOME PAGE)
+- [ ] Tela da Prova.
+
 ### Utilização do react router dom
 - [X] Configuração do main
   - [X] Definição da BASE em App.jsx
