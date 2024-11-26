@@ -22,12 +22,13 @@
 - [X] SignUp (Formulário de cadastro de candidato)
 
 ### HOOKS
-- [ ] ChangeForm (Este hook foi criado para trocar a tela de login e de cadastro de forma dinâmica através dos SPANs "Login", "Candidate-se")
+- [X] ChangeForm (Este hook foi criado para trocar a tela de login e de cadastro de forma dinâmica através dos SPANs "Login", "Candidate-se")
 - [ ] Criação de um token exclusivo para o usuário ao acessar a página pela primeira vez.
 
 ## FEATURES
+- [ ] Validação dos caracteres inseridos no input de matricula para apenas números.
 - [ ] Armazenamento do token no Local Storage;
-- [ ] Authenticação de usuário via número da matricula e senha;
+- [ ] Autenticação de usuário via número da matricula e senha;
 - [ ] Cadastro do usuário no banco de dados;
 - [ ] troca dinâmica dos formulários de login e cadastro;
 - [ ] Authenticação de acesso a sessão do candidado caso o usuário já tenha acessado antes;
