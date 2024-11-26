@@ -3,7 +3,7 @@
 ## Este projeto consiste em demonstrar uma tela de login de uma aplicação que tenho na minha empresa, onde coletamos candidatos para o projeto de estagiários (CFI).
 
 <div>
-  <p>ACESSE:  <a href="https://aribeiroc.github.io/react_codeseven_cfi/">https://aribeiroc.github.io/react_codeseven_cfi</a></p>
+  <p>ACESSE:  <a href="">https://aribeiroc.github.io/react_codeseven_cfi</a></p>
   <img src="https://cdn.discordapp.com/attachments/1037246336669601812/1306845899401465898/image.png?ex=67382696&is=6736d516&hm=11515bc3e9767f7a9b310f1580283a18274212a9e2f972c17a08c6c523ce66da&"
 </div>
 
