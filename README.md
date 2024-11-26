@@ -40,17 +40,17 @@
 
   ### Criação dos Hooks
   - [X] ChangeForm (Este hook foi criado para trocar a tela de login e de cadastro de forma dinâmica através dos SPANs "Login", "Candidate-se")
-  - [ ] Criação de um token exclusivo para o usuário ao acessar a página pela primeira vez.
+  - [X] Criação de um token exclusivo para o usuário ao acessar a página pela primeira vez.
 
   ### Criação dos Routers
   - [X] FormSign (Este componente é um conteiner com o banner e toda a estrutura para receber os formulários de signIn e signout de forma dinâmica)
   
   ### Features
   - [X] Validação dos caracteres inseridos no input de matricula para apenas números.
-  - [ ] Armazenamento do token no Local Storage;
+  - [X] Armazenamento do token no Local Storage;
   - [X] Autenticação de usuário via número da matricula e senha;
   - [ ] Cadastro do usuário no banco de dados;
   - [X] troca dinâmica dos formulários de login e cadastro;
-  - [ ] Authenticação de acesso a sessão do candidado caso o usuário já tenha acessado antes;
+  - [X] Authenticação de acesso a sessão do candidado caso o usuário já tenha acessado antes;
   - [ ] Sistema de logout
   - [ ] Limpeza do token ao fazer logout do sistema;
