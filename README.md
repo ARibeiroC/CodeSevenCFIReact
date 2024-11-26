@@ -4,7 +4,7 @@
 
 <div>
   <p>ACESSE:  <a href="https://aribeiroc.github.io/CodeSevenCFIReact/">https://aribeiroc.github.io/CodeSevenCFIReact/</a></p>
-  <img src="https://cdn.discordapp.com/attachments/1037246336669601812/1306845899401465898/image.png?ex=67382696&is=6736d516&hm=11515bc3e9767f7a9b310f1580283a18274212a9e2f972c17a08c6c523ce66da&"
+  <img src="https://cdn.discordapp.com/attachments/1037246336669601812/1306845899401465898/image.png?ex=6746a716&is=67455596&hm=5b2651f4660a9085d2a508272f96441a32ad3ba51f1eb1fed0f91537dcdc8147&"
 </div>
 
 # ETAPAS
