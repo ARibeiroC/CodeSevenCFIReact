@@ -13,39 +13,43 @@
  <img align="center" alt="Ribeiro-JS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
  <img align="center" alt="Ribeiro-JS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg">
  <img align="center" alt="Ribeiro-JS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
- <img align="center" alt="Ribeiro-JS" height="30" width="30" src="https://dl.flathub.org/media/org/sqlitebrowser/sqlitebrowser/3c094fb8038e961ea106f2bf8c8318f5/icons/128x128@2/org.sqlitebrowser.sqlitebrowser.png" alt="Local Storage">
+ <img align="center" alt="Ribeiro-JS" height="30" width="30" src="https://dl.flathub.org/media/org/sqlitebrowser/sqlitebrowser/3c094fb8038e961ea106f2bf8c8318f5/icons/128x128@2/org.sqlitebrowser.sqlitebrowser.png">
 </div>
 
 # ETAPAS
 
-### Elaboração do Design
+## Design
 - [X] Tela do Login
 - [X] Tela de Cadastro
 - [ ] Tela de acesso (HOME PAGE)
 - [ ] Tela da Prova.
 
-### Utilização do react router dom
-- [X] Configuração do main
-  - [X] Definição da BASE em App.jsx
-  - [X] Definição das Childrens
-  - [X] Utilização do RouteProvider
 
-### COMPONENTS
-- [X] Button (Botões das páginas)
-- [X] FormSign (Este componente é um conteiner com o banner e toda a estrutura para receber os formulários de signIn e signout de forma dinâmica)
-- [X] SignIn (Formulário de login da página)
-- [X] SignUp (Formulário de cadastro de candidato)
+## Coding
+  ### Instalação e configuração do React-Router-DOM.
+  - [X] Configuração do main
+    - [X] Definição da BASE em App.jsx
+    - [X] Definição das Childrens
+    - [X] Utilização do RouteProvider
 
-### HOOKS
-- [X] ChangeForm (Este hook foi criado para trocar a tela de login e de cadastro de forma dinâmica através dos SPANs "Login", "Candidate-se")
-- [ ] Criação de um token exclusivo para o usuário ao acessar a página pela primeira vez.
+  ### Criação dos Componentes
+  - [X] Button (Botões das páginas)
+  - [X] SignIn (Formulário de login da página)
+  - [X] SignUp (Formulário de cadastro de candidato)
 
-## FEATURES
-- [X] Validação dos caracteres inseridos no input de matricula para apenas números.
-- [ ] Armazenamento do token no Local Storage;
-- [X] Autenticação de usuário via número da matricula e senha;
-- [ ] Cadastro do usuário no banco de dados;
-- [X] troca dinâmica dos formulários de login e cadastro;
-- [ ] Authenticação de acesso a sessão do candidado caso o usuário já tenha acessado antes;
-- [ ] Sistema de logout
-- [ ] Limpeza do token ao fazer logout do sistema;
+  ### Criação dos Hooks
+  - [X] ChangeForm (Este hook foi criado para trocar a tela de login e de cadastro de forma dinâmica através dos SPANs "Login", "Candidate-se")
+  - [ ] Criação de um token exclusivo para o usuário ao acessar a página pela primeira vez.
+
+  ### Criação dos Routers
+  - [X] FormSign (Este componente é um conteiner com o banner e toda a estrutura para receber os formulários de signIn e signout de forma dinâmica)
+  
+  ### Features
+  - [X] Validação dos caracteres inseridos no input de matricula para apenas números.
+  - [ ] Armazenamento do token no Local Storage;
+  - [X] Autenticação de usuário via número da matricula e senha;
+  - [ ] Cadastro do usuário no banco de dados;
+  - [X] troca dinâmica dos formulários de login e cadastro;
+  - [ ] Authenticação de acesso a sessão do candidado caso o usuário já tenha acessado antes;
+  - [ ] Sistema de logout
+  - [ ] Limpeza do token ao fazer logout do sistema;
