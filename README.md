@@ -46,11 +46,13 @@
   - [X] FormSign (Este componente é um conteiner com o banner e toda a estrutura para receber os formulários de signIn e signout de forma dinâmica)
   
   ### Features
-  - [X] Validação dos caracteres inseridos no input de matricula para apenas números.
-  - [X] Armazenamento do token no Local Storage;
-  - [X] Autenticação de usuário via número da matricula e senha;
-  - [ ] Cadastro do usuário no banco de dados;
-  - [X] troca dinâmica dos formulários de login e cadastro;
-  - [X] Authenticação de acesso a sessão do candidado caso o usuário já tenha acessado antes;
-  - [ ] Sistema de logout
-  - [ ] Limpeza do token ao fazer logout do sistema;
+  - [X] Validação de dados dos inputs.
+  - [X] Mascara dos inputs de telefone
+  - [X] Gerador de Token.
+  - [X] Armazenamento do token no Local Storage.
+  - [X] Autenticação de usuário via número da matricula e senha.
+  - [ ] Cadastro do usuário no banco de dados.
+  - [X] troca dinâmica dos formulários de login e cadastro.
+  - [X] Authenticação de acesso a sessão do candidado caso o usuário já tenha acessado antes.
+  - [ ] Sistema de logout.
+  - [ ] Limpeza do token ao fazer logout do sistema.
