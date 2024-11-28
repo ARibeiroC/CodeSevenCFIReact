@@ -59,5 +59,7 @@
   - [X] Cadastro do usuário no banco de dados.
   - [X] troca dinâmica dos formulários de login e cadastro.
   - [X] Authenticação de acesso a sessão do candidado caso o usuário já tenha acessado antes.
+  - [X] Validação automática e carregamento da sessão se o usuário não deslogou do sistema.
+  - [ ] Envio dos dados de Usuário e Senha por email.
   - [ ] Sistema de logout.
   - [ ] Limpeza do token ao fazer logout do sistema.
