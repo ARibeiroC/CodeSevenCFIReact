@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import '../css/Home.css'
+import { Header } from '../components/Header'
 
 export function Home(){
 
@@ -7,8 +8,7 @@ export function Home(){
 
     return (
         <div className="home">
-            <h1>Home Page</h1>
-            <h3>Seja Bem Vindo <span>{user}</span></h3>
+            <Header></Header>
         </div>
     )
 }

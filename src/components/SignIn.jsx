@@ -17,10 +17,11 @@ export function SignIn(){
 
     // HOOKS
     const navigate = useNavigate()
+    const {validateInputNumber} = useValidate()
     
     const handleSubmit = (e)=>{
         e.preventDefault()
-        
+        console.log(register, password)
         if (candidates){
             candidates.forEach((candidate)=>{
                 if (candidate.registerCandidate === register && candidate.passwordCandidate === password){
@@ -38,12 +39,12 @@ export function SignIn(){
     }
 
     const onChangeRegister = (input)=>{
-        const updateInput = useValidate(input)
+        const updateInput = validateInputNumber(input)
         setRegister(updateInput)
     }
 
     const onChangePassword = (input)=>{
-        const updateInput = useValidate(input)
+        const updateInput = validateInputNumber(input)
         setPassword(updateInput)
     }
 
@@ -60,6 +61,7 @@ export function SignIn(){
                         placeholder="Ex: 001234"
                         value={register}
                         onChange={(e)=>{onChangeRegister(e.target.value)}}
+                        maxLength={6}
                         required
                         />
                 </label>
@@ -71,6 +73,7 @@ export function SignIn(){
                         placeholder="Ex: 123" 
                         value={password}
                         onChange={(e)=>{onChangePassword(e.target.value)}}
+                        maxLength={3}
                         required
                         />
                 </label>

@@ -85,7 +85,7 @@ export function SignUp(){
                         placeholder="Ex: 001234"
                         value={registerCandidate}
                         onChange={(e)=>{onChangeRegisterCandidate(e.target.value)}}
-                        maxLength={5}
+                        maxLength={6}
                         // required
                         />
                 </label>
