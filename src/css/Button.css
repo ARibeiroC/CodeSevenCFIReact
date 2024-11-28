@@ -14,4 +14,14 @@ button:hover {
 
 button:active {
     box-shadow: 4px 4px 4px 0px inset var(--color-default);
+    transform: translateY(1px);
+}
+
+.disable {
+    background-color: #ccc !important;
+}
+
+.disable:active {
+    box-shadow: none;
+    transform: none;
 }

@@ -1,10 +1,17 @@
 import {SignUp} from '../components/SignUp'
-import { SignIn } from '../components/SignIn'
+import {SignIn} from '../components/SignIn'
 import logo from '../assets/completeLogoAcademy.png'
 import '../css/FormSign.css'
 
+// HOOKS
+import { useForm } from '../hooks/useForm'
+
 
 export function FormSign(){
+
+    const forms = [<SignIn/>,<SignUp/>]
+    const {currentForm, changeForm} = useForm(forms)
+
     return (
         <div id="container">
             <div id="img-login">
@@ -20,7 +27,9 @@ export function FormSign(){
                 </div>
             </div>
             <div id="form-sign">
-                <SignUp />
+                {currentForm === 0 ? <SignIn /> : <SignUp />}
+
+                {currentForm === 0 ? <p>Não é candidato ainda? <span onClick={(e)=> {changeForm(currentForm+1, e)} }>Candidate-se</span></p> : <p>Eu já tenho um registro! <span onClick={(e)=> {changeForm(currentForm-1, e)} }>Login</span></p>}
             </div>
         </div>
     )

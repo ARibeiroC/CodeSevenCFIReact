@@ -1,11 +1,16 @@
 import '../css/Button.css'
 
-export function Button({style, text, action = handleClick(e)}){
+export function Button({style, text, disabled = false, action = ()=>{}}){
 
     function handleClick(e){
         e.preventDefault()
-        console.log('clicou')
+        action(e)
     }
 
-    return <button className={style} onClick={handleClick} >{text}</button>
+    if (disabled){
+        return <button className={style} disabled={disabled}>{text}</button>
+    }else {
+        return <button className={style} >{text}</button>
+    }
+
 }
