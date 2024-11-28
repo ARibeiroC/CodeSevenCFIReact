@@ -47,11 +47,16 @@
   
   ### Features
   - [X] Validação de dados dos inputs.
-  - [X] Mascara dos inputs de telefone
+  - [X] Mascara dos inputs de telefone.
+  - [X] Validação dos campos de Nomes, onde o usuário não consegue inserir valores numéricos.
+  - [X] Validação dos campos de telefone, onde o usuário não consegue inserir valores de texto.
+  - [X] Mascara de formatação de texto nos campos de telefones
+  - [X] Validação de campos vazios, onde é impossibilitados de submeter o formulário com campos vazios
   - [X] Gerador de Token.
   - [X] Armazenamento do token no Local Storage.
+  - [X] Persistencia de dados, quando o usuário loga no sistema é armazenado qual o usuário que logou no sistema.
   - [X] Autenticação de usuário via número da matricula e senha.
-  - [ ] Cadastro do usuário no banco de dados.
+  - [X] Cadastro do usuário no banco de dados.
   - [X] troca dinâmica dos formulários de login e cadastro.
   - [X] Authenticação de acesso a sessão do candidado caso o usuário já tenha acessado antes.
   - [ ] Sistema de logout.
