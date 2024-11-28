@@ -11,9 +11,9 @@ export function Header(){
         <div className="header">
             <header>
                 <div className="social-media">
-                    <a>Facebook</a>
-                    <a>Instagram</a>
-                    <a>Discord</a>
+                    <a href='#'>HOME</a>
+                    <a href='#'>PROJETO CFI</a>
+                    <a href='#'>REALIZAR PROVA</a>
                 </div>
                 <div className="menu-control">
                     <nav>

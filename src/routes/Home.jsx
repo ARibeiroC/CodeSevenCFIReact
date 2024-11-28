@@ -19,6 +19,15 @@ export function Home(){
     return (
         <div className="home">
             <Header></Header>
+            <div className="warning">
+                <p>Projeto em desenvolvimento</p>
+            </div>
+            <div className="container">
+                <h1>Obrigado por acessar nosso sistema</h1>
+                <h4>Estou muito animado com o progresso do projeto, espero que você também tenha gostado do resultado até agora.</h4>
+                <p>Para conhecer mais a fundo, considere acessar nosso repositório no github</p>
+                <a href="https://github.com/ARibeiroC/CodeSevenCFIReact">github.com/ARibeiroC/CodeSevenCFIReact</a>
+            </div>
         </div>
     )
 }

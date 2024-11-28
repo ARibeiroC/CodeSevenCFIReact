@@ -2,6 +2,7 @@
     background-color: var(--color-ice);
     color: var(--color-pink);
     width: 100%;
+    justify-self: baseline;
 }
 
 .header header {
@@ -21,8 +22,20 @@
     margin-left: 1rem;
 }
 
+.header header .social-media a{
+    color: var(--color-pink);
+    font-weight: bolder;
+    text-decoration: none;
+    transition: .4s;
+}
+
+.header header .social-media a:hover {
+    color: var(--color-purple);
+}
+
 .header header .menu-control {
     display: flex;
+    gap: 1rem;
 }
 
 .header header .menu-control nav {
