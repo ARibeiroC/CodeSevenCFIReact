@@ -6,7 +6,8 @@ import { useNavigate } from "react-router-dom"
 // HOOKS IMPORT
 import { useFetch } from '../hooks/useFetch'
 import { useValidate } from "../hooks/useValidate"
-import { useToken, createList} from "../hooks/useToken"
+import { useToken} from "../hooks/useToken"
+import { useAuthLoginConnected } from "../hooks/useAuthUserConnected"
 
 export function SignIn(){
     const uri = `${import.meta.env.VITE_API_URL}/candidates`
@@ -47,6 +48,13 @@ export function SignIn(){
         const updateInput = validateInputNumber(input)
         setPassword(updateInput)
     }
+    
+    const isConnected = useAuthLoginConnected('home')
+    useEffect(()=>{
+        if (isConnected){
+            navigate('/CodeSevenCFIReact/home')
+        }
+    },[])
 
     return (
         <div className="sign">
