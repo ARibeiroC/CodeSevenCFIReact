@@ -1,15 +1,24 @@
+// LIBS IMPORT
 import { StrictMode } from 'react'  
 import { createRoot } from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import './index.css'
+
+// COMPONENTS IMPORT
+import { HomePage } from './routes/HomePage.jsx'
 import App from './App.jsx'
+
+
+// ROUTES IMPORT
 import { FormSign } from './routes/FormSign.jsx'
 import { ErrorPage } from './routes/ErrorPage.jsx'
 import { Home } from './routes/Home.jsx'
+import { ConfirmRegister } from './routes/ConfirmRegister.jsx'
+import { ProjectCfi } from './routes/ProjectCfi.jsx'
+import { DoTest } from './routes/DoTest.jsx'
 
 // CONTEXT IMPORT
 import { UserContextProvider } from './context/UserContext.jsx'
-import { ConfirmRegister } from './routes/ConfirmRegister.jsx'
 
 const raiz = '/CodeSevenCFIReact'
 
@@ -25,10 +34,24 @@ const router = createBrowserRouter([
       },
       {
         path: `${raiz}/home`,
-        element: <Home />
+        element: <Home />,
+        children: [
+          {
+            path: `${raiz}/home`,
+            element: <HomePage />
+          },
+          {
+            path: `${raiz}/home/project-cfi`,
+            element: <ProjectCfi />
+          },
+          {
+            path: `${raiz}/home/test`,
+            element: <DoTest />
+          },
+        ]
       },
       {
-        path: `${raiz}/ConfirmRegister`,
+        path: `${raiz}/confirm-register`,
         element: <ConfirmRegister />
       }
     ]

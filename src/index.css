@@ -3,7 +3,9 @@
   --color-pink: #D70AC1;
   --color-fuchsia: #FF00FF;
   --color-ice: #f0f0f0;
-  --color-lightgray: #ccc;
+  --color-azure: azure;
+  --color-lightgray: #dfdfdf33;
+  --color-white: white;
   --color-darkblue: #110e2d;
   --color-darkgray: #222;
   --color-default: rgb(17, 17, 17);
@@ -20,4 +22,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Helvetica;
+}
+
+body {
+  color: var(--color-ice);
 }
