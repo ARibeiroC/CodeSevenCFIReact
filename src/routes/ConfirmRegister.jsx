@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom"
 export function ConfirmRegister(){
     const navigate = useNavigate()
     setTimeout(() => {
-        navigate("/CodeSevenCFIReact")
+        navigate("/")
     }, 5000);
     return (
         <div className='confirm-register'>
