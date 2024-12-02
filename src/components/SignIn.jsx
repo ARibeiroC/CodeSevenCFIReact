@@ -28,7 +28,7 @@ export function SignIn(){
                 if (candidate.registerCandidate === register && candidate.passwordCandidate === password){
                     localStorage.setItem('user', candidate.nameComplete)                    
                     localStorage.setItem('token',  useToken())                    
-                    navigate("/CodeSevenCFIReact/Home") 
+                    navigate("/Home") 
                 }
             })
         } else {
@@ -52,7 +52,7 @@ export function SignIn(){
     const isConnected = useAuthLoginConnected('home')
     useEffect(()=>{
         if (isConnected){
-            navigate('/CodeSevenCFIReact/home')
+            navigate('/home')
         }
     },[])
 

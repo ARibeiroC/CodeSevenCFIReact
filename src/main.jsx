@@ -11,7 +11,7 @@ import { Home } from './routes/Home.jsx'
 import { UserContextProvider } from './context/UserContext.jsx'
 import { ConfirmRegister } from './routes/ConfirmRegister.jsx'
 
-const raiz = '/CodeSevenCFIReact'
+const raiz = '/'
 
 const router = createBrowserRouter([
   {
@@ -24,11 +24,11 @@ const router = createBrowserRouter([
         element: <FormSign />
       },
       {
-        path: `${raiz}/home`,
+        path: `/home`,
         element: <Home />
       },
       {
-        path: `${raiz}/ConfirmRegister`,
+        path: `/ConfirmRegister`,
         element: <ConfirmRegister />
       }
     ]

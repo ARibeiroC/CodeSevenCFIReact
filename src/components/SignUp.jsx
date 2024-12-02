@@ -29,7 +29,7 @@ export function SignUp(){
     const handleSubmit = (e)=>{
         e.preventDefault()   
         setCandidate([registerCandidate, nameComplete, emailCandidate, telephoneCandidate, nameResponsible, cellphoneResponsible])
-        navigate('/CodeSevenCFIReact/ConfirmRegister')
+        navigate('/ConfirmRegister')
     }
 
     const onChangeRegisterCandidate = (input)=>{

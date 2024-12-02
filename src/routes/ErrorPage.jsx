@@ -6,7 +6,7 @@ export function ErrorPage(){
     const navigate = useNavigate()
     useEffect(()=>{
         setTimeout(()=>{
-            navigate('/CodeSevenCFIReact')
+            navigate('/')
         },6000)
     })
     return (

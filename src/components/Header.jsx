@@ -5,7 +5,7 @@ export function Header(){
     const navigate = useNavigate()
     const handleLogout = (e)=>{
         localStorage.clear()
-        navigate('/CodeSevenCFIReact/')
+        navigate('/')
     }
     return (
         <div className="header">
