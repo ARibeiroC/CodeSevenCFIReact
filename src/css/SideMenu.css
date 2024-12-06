@@ -1,4 +1,4 @@
-sidebar {
+nav {
     color: var(--color-pink);
     width: 20%;
     justify-self: baseline;
@@ -40,7 +40,7 @@ dialog::backdrop {
 }
 
 
-sidebar .area-control {
+nav .area-control {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,7 +50,7 @@ sidebar .area-control {
     background-color: var(--color-purple);
 }
 
-sidebar .area-control .image-user-profile {
+nav .area-control .image-user-profile {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,19 +63,19 @@ sidebar .area-control .image-user-profile {
     border: 1px solid var(--color-azure);
 }
 
-sidebar .area-control p{
+nav .area-control p{
     font-size: 1rem;
     padding: .5rem;
     font-weight: 600;
     color: var(--color-azure);
 }
 
-sidebar .area-control .image-user-profile img {
+nav .area-control .image-user-profile img {
     max-width: 100%;
     cursor: pointer;
 }
 
-sidebar .nav-menu {
+nav .nav-menu {
     display: flex;
     flex-direction: column;
     gap: .8rem;
@@ -85,20 +85,20 @@ sidebar .nav-menu {
     height: 100%;
 }
 
-sidebar .nav-menu .item-menu {
+nav .nav-menu .item-menu {
     display: flex;
     align-items: center;
 }
 
-sidebar .nav-menu .item-menu:hover, sidebar .nav-menu .item-menu a:hover {
+nav .nav-menu .item-menu:hover, nav .nav-menu .item-menu a:hover {
     color: var(--color-fuchsia);
 }
 
-sidebar .nav-menu, sidebar .nav-menu a{
+nav .nav-menu, nav .nav-menu a{
     color: var(--color-purple);
 }
 
-sidebar .nav-menu a{
+nav .nav-menu a{
     flex: 1;
     display: flex;
     justify-content: space-between;

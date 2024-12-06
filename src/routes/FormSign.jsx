@@ -2,15 +2,29 @@ import {SignUp} from '../components/SignUp'
 import {SignIn} from '../components/SignIn'
 import logo from '../assets/completeLogoAcademy.png'
 import '../css/FormSign.css'
+import { useAuthLoginConnected } from "../hooks/useAuthUserConnected"
+import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 // HOOKS
 import { useForm } from '../hooks/useForm'
+
 
 
 export function FormSign(){
 
     const forms = [<SignIn/>,<SignUp/>]
     const {currentForm, changeForm} = useForm(forms)
+    
+    const navigate = useNavigate()
+
+    const isConnected = useAuthLoginConnected()
+    console.log(isConnected)
+    useEffect(()=>{
+        if (isConnected){
+            navigate('/area-do-candidato')
+        }
+    },[])
 
     return (
         <div id="container">

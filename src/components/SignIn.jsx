@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom"
 import { useFetch } from '../hooks/useFetch'
 import { useValidate } from "../hooks/useValidate"
 import { useToken} from "../hooks/useToken"
-import { useAuthLoginConnected } from "../hooks/useAuthUserConnected"
 
 export function SignIn(){
     const uri = `${import.meta.env.VITE_API_URL}/candidates`
@@ -48,13 +47,6 @@ export function SignIn(){
         const updateInput = validateInputNumber(input)
         setPassword(updateInput)
     }
-    
-    const isConnected = useAuthLoginConnected('home')
-    useEffect(()=>{
-        if (isConnected){
-            navigate('/')
-        }
-    },[])
 
     return (
         <div className="sign">
