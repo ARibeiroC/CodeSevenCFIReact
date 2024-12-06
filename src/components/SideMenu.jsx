@@ -39,7 +39,7 @@ export function SideMenu(){
     const user = useUserName()
 
     return (
-        <nav>
+        <div className="nav">
             <dialog ref={modal}>
                 <button ref={btnCloseModal} onClick={closeModal} className="btnClose">X</button>
                 <h2>Perfil do Usuário</h2>
@@ -71,6 +71,6 @@ export function SideMenu(){
                     <NavLink to="/CodeSevenCFIReact" onClick={handleLogout}>Logout<TbLogout2 /></NavLink>
                 </div>
             </nav>
-        </nav>
+        </div>
     )
 }
