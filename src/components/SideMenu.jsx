@@ -24,7 +24,6 @@ export function SideMenu(){
     
     const handleLogout = ()=>{
         localStorage.clear()
-        navigate('/')
     }
 
     function handleShowModal(){
@@ -68,7 +67,7 @@ export function SideMenu(){
                     <NavLink to="/area-do-candidato/test">Configurações<FaGear /></NavLink>
                 </div>
                 <div className="item-menu">
-                    <NavLink to="/CodeSevenCFIReact" onClick={handleLogout}>Logout<TbLogout2 /></NavLink>
+                    <NavLink to="/" onClick={handleLogout}>Logout<TbLogout2 /></NavLink>
                 </div>
             </nav>
         </div>
