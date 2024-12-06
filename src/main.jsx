@@ -31,19 +31,19 @@ const router = createBrowserRouter([
         element: <FormSign />
       },
       {
-        path: `/home`,
+        path: `/area-do-candidato`,
         element: <Home />,
         children: [
           {
-            path: `/home`,
+            path: `/area-do-candidato`,
             element: <HomePage />
           },
           {
-            path: `/home/project-cfi`,
+            path: `/area-do-candidato/project-cfi`,
             element: <ProjectCfi />
           },
           {
-            path: `/home/test`,
+            path: `/area-do-candidato/test`,
             element: <DoTest />
           },
         ]
@@ -63,8 +63,6 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <UserContextProvider>
       <RouterProvider router={router} />
-    </UserContextProvider>
   </StrictMode>,
 )
