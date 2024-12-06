@@ -11,7 +11,7 @@
     background-blend-mode: luminosity;
     background-size: 40%;
     background-color: var(--color-lightgray);
-    background-image: url("../../public/simpleLogoWhite.png");
+    background-image: url("/simpleLogoWhite.png");
 }
 
 .home-page .advertising {

@@ -20,38 +20,36 @@ import { DoTest } from './routes/DoTest.jsx'
 // CONTEXT IMPORT
 import { UserContextProvider } from './context/UserContext.jsx'
 
-const raiz = '/'
-
 const router = createBrowserRouter([
   {
-    path: raiz,
+    path: '/',
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: raiz,
+        path: '/',
         element: <FormSign />
       },
       {
-        path: `${raiz}/home`,
+        path: `/home`,
         element: <Home />,
         children: [
           {
-            path: `${raiz}/home`,
+            path: `/home`,
             element: <HomePage />
           },
           {
-            path: `${raiz}/home/project-cfi`,
+            path: `/home/project-cfi`,
             element: <ProjectCfi />
           },
           {
-            path: `${raiz}/home/test`,
+            path: `/home/test`,
             element: <DoTest />
           },
         ]
       },
       {
-        path: `${raiz}/confirm-register`,
+        path: `/confirm-register`,
         element: <Home />
       },
       {
