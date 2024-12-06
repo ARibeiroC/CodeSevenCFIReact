@@ -19,10 +19,16 @@
 
 # ETAPAS
 
+## RESPONSIVIDADE
+- [ ] Login
+- [ ] Cadastro
+- [ ] Área do candidato
+- [ ] Prova
+
 ## Design
 - [X] Tela do Login
 - [X] Tela de Cadastro
-- [ ] Tela de acesso (HOME PAGE)
+- [ ] Área do Candidato
 - [ ] Tela da Prova.
 
 
