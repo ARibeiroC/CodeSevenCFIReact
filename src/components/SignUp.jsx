@@ -1,4 +1,3 @@
-import '../css/Sign.css'
 import { Button } from "./Button"
 
 // HOOKs
@@ -8,6 +7,11 @@ import { useFetch } from "../hooks/useFetch"
 import { useValidate } from '../hooks/useValidate'
 import { useEffect, useState } from "react"
 import { useTransformArrayInObject } from "../hooks/useTransformArrayInObject"
+
+
+// STYLED COMPONENTS IMPORT
+import {Container, Form} from '../css/SignCSS'
+
 
 export function SignUp(){
     const [candidate, setCandidate] = useState([])
@@ -74,13 +78,12 @@ export function SignUp(){
     }, [candidate])
 
     return (
-        <div className="sign">
-            <h2 className="title">Sign Up</h2>
-            <form onSubmit={handleSubmit}>
-                <label className="labels">
-                    <span className="spans">Matricula</span>
+        <Container>
+            <h2>Sign Up</h2>
+            <Form onSubmit={handleSubmit}>
+                <label>
+                    <span>Matricula</span>
                     <input
-                        className="inputs"
                         type="text" 
                         placeholder="Ex: 001234"
                         value={registerCandidate}
@@ -89,10 +92,9 @@ export function SignUp(){
                         // required
                         />
                 </label>
-                <label className="labels">
-                    <span className="spans">Nome Completo</span>
+                <label>
+                    <span>Nome Completo</span>
                     <input
-                        className="inputs"
                         id='name-candidate'
                         type="text"
                         placeholder="Ex: José da Costa Filho" 
@@ -101,10 +103,9 @@ export function SignUp(){
                         required
                         />
                 </label>
-                <label className="labels">
-                    <span className="spans">E-mail</span>
+                <label>
+                    <span>E-mail</span>
                     <input
-                        className="inputs"
                         type="email"
                         placeholder="Ex: primeironome@email.com"
                         value={emailCandidate}
@@ -112,10 +113,9 @@ export function SignUp(){
                         required
                         />
                 </label>
-                <label className="labels">
-                    <span className="spans">Celular de Candidato</span>
+                <label>
+                    <span>Celular de Candidato</span>
                     <input
-                        className="inputs"
                         type="text"
                         placeholder="(xx) 99999-0000"
                         value={telephoneCandidate}
@@ -124,10 +124,9 @@ export function SignUp(){
                         required
                         />
                 </label>
-                <label className="labels">
-                    <span className="spans">Nome do Responsável</span>
+                <label>
+                    <span>Nome do Responsável</span>
                     <input
-                        className="inputs"
                         id='name-reponsible'
                         type="text"
                         placeholder="Ex: José da Costa Filho"
@@ -136,10 +135,9 @@ export function SignUp(){
                         required
                         />
                 </label>
-                <label className="labels">
-                    <span className="spans">Celular do Responsável</span>
+                <label>
+                    <span>Celular do Responsável</span>
                     <input
-                        className="inputs"
                         type="text"
                         placeholder="(xx) 99999-0000"
                         value={cellphoneResponsible}
@@ -149,7 +147,7 @@ export function SignUp(){
                         />
                 </label>
                 <Button style='signup' text="Candidatar-se" />
-            </form>
-        </div>
+            </Form>
+        </Container>
     )
 }

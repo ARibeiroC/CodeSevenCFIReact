@@ -7,6 +7,8 @@
 
     background-color: var(--color-lightgray);
     box-shadow: 2px 0px 2px #222222aa;
+    height: 100vh;
+    /* position: fixed; */
 }
 
 dialog::backdrop {
@@ -77,6 +79,7 @@ dialog::backdrop {
     padding: .6rem;
     height: 100%;
 }
+
 .nav .nav-menu .item-menu {
     display: flex;
     align-items: center;

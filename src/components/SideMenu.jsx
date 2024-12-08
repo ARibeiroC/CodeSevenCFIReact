@@ -13,8 +13,8 @@ import { useUserName } from "../hooks/useUserName";
 import { useRef } from "react";
 
 
-// CSS IMPORT
-import '../css/SideMenu.css'
+// STYLED COMPONENT IMPORT
+import { AreaControl, Container, Dialog, NavMenu } from "../css/SideMenuCSS";
 
 
 export function SideMenu(){
@@ -38,19 +38,19 @@ export function SideMenu(){
     const user = useUserName()
 
     return (
-        <div className="nav">
-            <dialog ref={modal}>
+        <Container>
+            <Dialog ref={modal}>
                 <button ref={btnCloseModal} onClick={closeModal} className="btnClose">X</button>
                 <h2>Perfil do Usuário</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid blanditiis, sunt sequi fuga at perspiciatis? Eum culpa saepe praesentium. Amet voluptate perferendis facere, inventore sint a tempore iure laborum aut.</p>
-            </dialog>
-            <div className="area-control">
+            </Dialog>
+            <AreaControl>
                 <div className="image-user-profile">
                     <img src="https://cdn-icons-png.flaticon.com/512/219/219983.png" alt="Perfil img" onClick={handleShowModal}/>
                 </div>
                 <p>{user}</p>
-            </div>
-            <nav className="nav-menu">
+            </AreaControl>
+            <NavMenu>
                 <div className="item-menu">
                     <NavLink to="/area-do-candidato">HomePage<FaHouse /></NavLink>
                 </div>
@@ -69,7 +69,7 @@ export function SideMenu(){
                 <div className="item-menu">
                     <NavLink to="/" onClick={handleLogout}>Logout<TbLogout2 /></NavLink>
                 </div>
-            </nav>
-        </div>
+            </NavMenu>
+        </Container>
     )
 }

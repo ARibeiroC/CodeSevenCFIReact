@@ -1,8 +1,8 @@
 // LIBS IMPORT
 import { Outlet, useNavigate } from 'react-router-dom'
 
-// CSS IMPORT
-import '../css/Home.css'
+// STYLED COMPONENTS IMPORT
+import { Container } from '../css/HomeCSS'
 
 // COMPONENTS IMPORT
 import { SideMenu } from '../components/SideMenu'
@@ -14,7 +14,6 @@ import { useEffect, useState } from 'react'
 
 export function Home(){
     // Hooks
-    const navigate = useNavigate()
     const localStorageUser = useAuthLoginConnected('home')
     const [user, setUser] = useState()
     useEffect(()=>{
@@ -25,9 +24,9 @@ export function Home(){
     
 
     return (
-        <div className="home">
+        <Container>
             <SideMenu />
             <Outlet />
-        </div>
+        </Container>
     )
 }

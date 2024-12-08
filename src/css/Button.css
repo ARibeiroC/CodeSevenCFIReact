@@ -25,3 +25,8 @@ button:active {
     box-shadow: none;
     transform: none;
 }
+
+section {
+    position: relative;
+    right: 0px
+}

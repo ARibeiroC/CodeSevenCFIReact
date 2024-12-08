@@ -1,5 +1,7 @@
-import './css/App.css'
 import { Outlet } from 'react-router-dom'
+
+// STYLED COMPONENTS IMPORT
+import { AppStyled } from './css/AppCSS'
 
 
 const url = "http://localhost:35333"
@@ -7,9 +9,9 @@ const url = "http://localhost:35333"
 function App() {
   
   return (
-    <div className='App'>
+    <AppStyled>
       <Outlet />
-    </div>
+    </AppStyled>
   )
 }
 
