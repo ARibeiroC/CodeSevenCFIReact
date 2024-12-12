@@ -1,0 +1,5 @@
+
+
+export function useAuthenticationUser(isValided){
+    
+}

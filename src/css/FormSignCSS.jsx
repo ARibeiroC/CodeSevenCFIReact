@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import bgRegister from '../assets/bgRegister.jpg'
+import {breakpoints} from './Breackpoints'
 
 const Container = styled.div`
     display: flex;
@@ -11,7 +12,16 @@ const Container = styled.div`
     border-radius: 15px;
     overflow: hidden;
     color: var(--color-ice);
+
+    @media ${breakpoints.lg}{
+        margin-inline: 1.2rem;
+
     }
+
+    @media ${breakpoints.md}{
+        width: 100%;
+    }
+
 `
 
 const BannerLogin = styled.div`
@@ -66,6 +76,10 @@ const BannerLogin = styled.div`
                 }
             }
         }
+
+    @media ${breakpoints.md}{
+        display: none;
+    }
 `
 
 const FormSignContainer = styled.div`
@@ -80,6 +94,20 @@ const FormSignContainer = styled.div`
     background-color: var(--color-ice);
     color: var(--color-pink);
     
+    p {
+        justify-content: center;
+
+        @media ${breakpoints.lgs}{
+            display: flex;
+            flex-wrap: wrap;
+            gap: .6rem;
+        }
+
+        @media ${breakpoints.sms}{
+            margin-inline: .4rem;
+        }
+    }
+
     p span {
     color: var(--color-purple);
     font-weight: bold;

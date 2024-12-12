@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import {breakpoints} from './Breackpoints'
+
 
 export const Container = styled.div`
     display: flex;
@@ -6,4 +8,10 @@ export const Container = styled.div`
 
     color: var(--color-purple);
     background-color: var(--color-white);
+    max-height: 100vh;
+    overflow: hidden;
+
+    @media ${breakpoints.mds}{
+        flex-direction: column;
+    }
 `

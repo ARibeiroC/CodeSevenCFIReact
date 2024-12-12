@@ -1,6 +1,6 @@
 // LIBS IMPORT
 import { StrictMode } from 'react'  
-import { createRoot } from 'react-dom/client'
+import { createRoot} from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import './index.css'
 
@@ -16,9 +16,8 @@ import { Home } from './routes/Home.jsx'
 import { ConfirmRegister } from './routes/ConfirmRegister.jsx'
 import { ProjectCfi } from './routes/ProjectCfi.jsx'
 import { DoTest } from './routes/DoTest.jsx'
+import { Events } from './routes/Events.jsx'
 
-// CONTEXT IMPORT
-import { UserContextProvider } from './context/UserContext.jsx'
 
 const router = createBrowserRouter([
   {
@@ -41,6 +40,10 @@ const router = createBrowserRouter([
           {
             path: `/area-do-candidato/project-cfi`,
             element: <ProjectCfi />
+          },
+          {
+            path: `/area-do-candidato/events`,
+            element: <Events />
           },
           {
             path: `/area-do-candidato/test`,

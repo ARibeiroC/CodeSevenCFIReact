@@ -1,6 +1,9 @@
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef, useEffect, Form, useContext } from "react"
 import { Button } from "./Button"
 import { useNavigate } from "react-router-dom"
+
+// IMAGES IMPORT
+import logo from '../assets/simpleLogoPurple.png'
 
 // HOOKS IMPORT
 import { useFetch } from '../hooks/useFetch'
@@ -9,37 +12,37 @@ import { useToken} from "../hooks/useToken"
 
 
 // STYLED COMPONENTS IMPORT
-import { Container, Form } from "../css/SignCSS"
+import { Container, FormStyled } from "../css/SignCSS"
+import { UsersContext } from "../context/UsersContext"
 
 export function SignIn(){
-    
-    const uri = `${import.meta.env.VITE_API_URL}/candidates`
+
     const [register, setRegister] = useState('')
     const [password, setPassword] = useState('')
-    const {data: candidates} = useFetch(uri)
     const registerCandidate = useRef(null)
 
-    // HOOKS
+    // const {data: candidates, loading} = useFetch(`${import.meta.env.VITE_API_URL}/candidates`)
     const navigate = useNavigate()
     const {validateInputNumber} = useValidate()
+
+     // CONTEXT IMPORT
+     const {users, loading} = useContext(UsersContext)
     
     const handleSubmit = (e)=>{
         e.preventDefault()
-        console.log(register, password)
-        if (candidates){
-            candidates.forEach((candidate)=>{
-                if (candidate.registerCandidate === register && candidate.passwordCandidate === password){
-                    localStorage.setItem('user', candidate.nameComplete)                    
+        if (users){
+            users.forEach((user)=>{
+                if (user.registerCandidate === register && user.passwordCandidate === password){
+                    localStorage.setItem('user', user.nameComplete)                    
                     localStorage.setItem('token',  useToken())                    
-                    navigate("/area-do-candidato") 
+                    return navigate("/area-do-candidato") 
+                } else {
+                    setPassword('')
+                    setRegister('')
+                    registerCandidate.current.focus()
                 }
             })
-        } else {
-            console.log('Sem conexão com banco de dados')
         }
-        setPassword('')
-        setRegister('')
-        registerCandidate.current.focus()
     }
 
     const onChangeRegister = (input)=>{
@@ -54,8 +57,11 @@ export function SignIn(){
 
     return (
         <Container>
+            <div className="logo-media-query">
+                <img src={logo} alt="Logotipo simplificado da Code Seven Academy" />
+            </div>
             <h2>Sign In</h2>
-            <Form onSubmit={handleSubmit}>
+            <FormStyled onSubmit={handleSubmit}>
                 <label>
                     <span>Matricula</span>
                     <input
@@ -79,8 +85,12 @@ export function SignIn(){
                         required
                         />
                 </label>
-                <Button style="signin" text="Entrar"/>
-            </Form>
+                {loading ? (
+                    <Button wait={true} />
+                ) : (
+                    <Button text={"Entrar"} />
+                )}
+            </FormStyled>
         </Container>
     )
 }

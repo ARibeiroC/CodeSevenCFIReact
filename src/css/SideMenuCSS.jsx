@@ -1,4 +1,9 @@
 import styled from "styled-components";
+import {breakpoints} from './Breackpoints'
+
+export const Content = styled.div`
+    display:none;
+`
 
 export const Container = styled.div`
     color: var(--color-pink);
@@ -28,23 +33,19 @@ export const Dialog = styled.dialog`
         height: 100%;
         background-color: #222222aa;
         padding: .8rem;
-
-        & button {
-            position: relative;
-            right: 15px;
-            border: 1px solid red;
-        }
     }
 
-    & button {
-        position: relative;
-        left: 98%;
-        top: 1%;
+    & .btnClose {
+        display: flex;
+        justify-content: flex-end;
+
+        padding: .6rem
     }
 
     & h2 {
         margin-inline: 1rem;
     }
+        
     & p {
         margin-inline: 1rem;
     }
@@ -68,13 +69,25 @@ export const AreaControl = styled.div`
         width: 150px;
         height: 150px;
         color: var(--color-azure);
-        border-radius: 100%;
-        border: 1px solid var(--color-azure);
-
+        
         & img {
             max-width: 100%;
-            cursor: pointer;    
+            cursor: pointer;
+            border: 1px solid var(--color-azure);
+            border-radius: 100%;
+            
+            @media ${breakpoints.lgs}{
+                max-width: 80%
+            }
         }
+        
+        @media ${breakpoints.mds}{
+            display: none;
+        }
+    }
+
+    & label {
+        display: none;
     }
 
     & p {
@@ -82,6 +95,27 @@ export const AreaControl = styled.div`
         padding: .5rem;
         font-weight: 600;
         color: var(--color-azure);
+    }
+
+    @media ${breakpoints.mds}{
+        width: 100vw;
+        flex-direction: row;
+
+        align-items: center;
+        justify-content: space-between;
+        color: var(--color-ice);
+        z-index: 1;
+        & input {
+            display: none;
+        }
+    }
+
+    @media ${breakpoints.mds}{
+        border-bottom: 1px solid var(--color-ice);
+        height: 60px;
+        & label {
+            display: block;
+        }
     }
 `
 
@@ -93,14 +127,29 @@ export const NavMenu = styled.div`
     font-size: 1.2rem;
     padding: .6rem;
     height: 100%;
+    transition: 1.5s ease;
+
+    &.toggle-menu{
+        top: 60px;
+    }
+
+    @media ${breakpoints.mds}{
+        position: absolute;
+        background-color: var(--color-fuchsia);
+        height: auto;
+        width: 100%;
+        top: -135px;
+    }
 
     & .item-menu {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
 
         & :hover {
             color: var(--color-fuchsia);
+
+            @media ${breakpoints.md}{
+                color: var(--color-ice);
+            }
         }
     }
 
@@ -114,6 +163,20 @@ export const NavMenu = styled.div`
         font-weight: bolder;
         text-decoration: none;
         transition: .4s;
+
+        @media ${breakpoints.lgs}{
+            // color: var(--color-ice);
+            z-index: 0;
+            & .icon {
+                display: none;
+            }
+        }
+
+        @media ${breakpoints.md}{
+            color: var(--color-ice);
+        }
     }
+
+
 
 `

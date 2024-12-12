@@ -1,5 +1,5 @@
 // LIBS IMPORT
-import { Outlet, useNavigate } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 
 // STYLED COMPONENTS IMPORT
 import { Container } from '../css/HomeCSS'
@@ -15,7 +15,9 @@ import { useEffect, useState } from 'react'
 export function Home(){
     // Hooks
     const localStorageUser = useAuthLoginConnected('home')
+
     const [user, setUser] = useState()
+
     useEffect(()=>{
         if(localStorageUser){
             setUser(localStorage.getItem('user'))

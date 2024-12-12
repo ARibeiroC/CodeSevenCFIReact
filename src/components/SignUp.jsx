@@ -10,7 +10,7 @@ import { useTransformArrayInObject } from "../hooks/useTransformArrayInObject"
 
 
 // STYLED COMPONENTS IMPORT
-import {Container, Form} from '../css/SignCSS'
+import {Container, FormStyled} from '../css/SignCSS'
 
 
 export function SignUp(){
@@ -80,7 +80,7 @@ export function SignUp(){
     return (
         <Container>
             <h2>Sign Up</h2>
-            <Form onSubmit={handleSubmit}>
+            <FormStyled onSubmit={handleSubmit}>
                 <label>
                     <span>Matricula</span>
                     <input
@@ -147,7 +147,7 @@ export function SignUp(){
                         />
                 </label>
                 <Button style='signup' text="Candidatar-se" />
-            </Form>
+            </FormStyled>
         </Container>
     )
 }

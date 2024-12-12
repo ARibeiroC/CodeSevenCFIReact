@@ -1,15 +1,15 @@
-import '../css/Button.css'
+import {ButtonStyled, DisabledStyled} from '../css/ButtonCSS'
 
-export function Button({style, text, action = ()=>{}, disabled = false, }){
+export function Button({text = 'aguarde...', action = ()=>{}, wait = false, }){
 
     function handleClick(e){
         action(e)
     }
 
-    if (disabled){
-        return <button className={style} onClick={handleClick} disabled={disabled}>{text}</button>
+    if (wait === true){
+        return <DisabledStyled onClick={handleClick} disabled={wait}>{text}</DisabledStyled>
     }else {
-        return <button className={style} onClick={handleClick} onSubmit={handleClick}>{text}</button>
+        return <ButtonStyled onClick={handleClick} onSubmit={handleClick}>{text}</ButtonStyled>
     }
 
 }
