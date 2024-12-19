@@ -4,7 +4,7 @@
 ## EM PROCESSO DE DESENVOLVIMENTO #
 
 <div>
-  <p>ACESSE:  <a href="https://codesevenacademy.netflify.app">https://codesevenacademy.netflify.app/</a></p>
+  <p>ACESSE:  <a href="https://codesevenacademy.netlify.app/">https://codesevenacademy.netlify.app/</a></p>
   <img src="https://cdn.discordapp.com/attachments/1037246336669601812/1306845899401465898/image.png?ex=6746a716&is=67455596&hm=5b2651f4660a9085d2a508272f96441a32ad3ba51f1eb1fed0f91537dcdc8147&"
 </div>
 
