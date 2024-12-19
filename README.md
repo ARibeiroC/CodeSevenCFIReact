@@ -1,11 +1,11 @@
 # PROJETO CFI (CURSOS DE FORMAÇÃO DE INSTRUTORES)
-## Este é um projeto FRONT-END desenvolvido para testar meus conhecimentos e claro obter experiência no desenvolvimento de uma aplicação simples com gestão de usuários. Ele é um teste de um projeto maior de ERP que estou desenvolvendo para uma escola de cursos profissionalizantes.
+## Este é um projeto FULLSTACK desenvolvido para testar meus conhecimentos e claro obter experiência no desenvolvimento de uma aplicação simples com gestão de usuários. Ele é um teste de um projeto maior de ERP que estou desenvolvendo para uma escola de cursos profissionalizantes.
 
 ## EM PROCESSO DE DESENVOLVIMENTO #
 
 <div>
   <p>ACESSE:  <a href="https://codesevenacademy.netlify.app/">https://codesevenacademy.netlify.app/</a></p>
-  <img src="https://cdn.discordapp.com/attachments/1037246336669601812/1306845899401465898/image.png?ex=6746a716&is=67455596&hm=5b2651f4660a9085d2a508272f96441a32ad3ba51f1eb1fed0f91537dcdc8147&"/>
+  <a href="https://ibb.co/k14gmy5"><img src="https://i.ibb.co/X87ZY4j/screen.png" alt="screen" border="0" /></a>
 </div>
 
 # TECNOLOGIAS
