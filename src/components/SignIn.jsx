@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, Form, useContext } from "react"
+import { useState, useRef, useEffect } from "react"
 import { Button } from "./Button"
 import { useNavigate } from "react-router-dom"
 
@@ -6,14 +6,13 @@ import { useNavigate } from "react-router-dom"
 import logo from '../assets/simpleLogoPurple.png'
 
 // HOOKS IMPORT
-import { useFetch } from '../hooks/useFetch'
 import { useValidate } from "../hooks/useValidate"
 import { useToken} from "../hooks/useToken"
 
 
 // STYLED COMPONENTS IMPORT
 import { Container, FormStyled } from "../css/SignCSS"
-import { UsersContext } from "../context/UsersContext"
+import { useFetch } from "../hooks/useFetch"
 
 export function SignIn(){
 
@@ -21,21 +20,22 @@ export function SignIn(){
     const [password, setPassword] = useState('')
     const registerCandidate = useRef(null)
 
-    // const {data: candidates, loading} = useFetch(`${import.meta.env.VITE_API_URL}/candidates`)
     const navigate = useNavigate()
     const {validateInputNumber} = useValidate()
 
-     // CONTEXT IMPORT
-     const {users, loading} = useContext(UsersContext)
+    // CONTEXT IMPORT
+    const uri = import.meta.env.VITE_API_URL
+    const {data: users, postData, loading } = useFetch(`${uri}/candidates`)
     
     const handleSubmit = (e)=>{
         e.preventDefault()
         if (users){
             users.forEach((user)=>{
                 if (user.registerCandidate === register && user.passwordCandidate === password){
-                    localStorage.setItem('user', user.nameComplete)                    
-                    localStorage.setItem('token',  useToken())                    
-                    return navigate("/area-do-candidato") 
+                    localStorage.setItem('user', user.nameComplete)
+                    localStorage.setItem('_id', user._id)                  
+                    localStorage.setItem('token',  useToken())
+                    return navigate(`/area-do-candidato/${user._id}`)
                 } else {
                     setPassword('')
                     setRegister('')
@@ -54,6 +54,10 @@ export function SignIn(){
         const updateInput = validateInputNumber(input)
         setPassword(updateInput)
     }
+
+    useEffect(()=>{
+
+    },[register])
 
     return (
         <Container>

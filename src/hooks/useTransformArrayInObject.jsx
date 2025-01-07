@@ -1,8 +1,11 @@
-export function useTransformArrayInObject(array){
-    const object = {}
-    const keys = ["registerCandidate","nameComplete","emailCandidate","telephoneCandidate","nameResponsible","cellphoneResponsible"]
-    keys.forEach((key, index)=>{
-        object[key] = array[index]
+export function useTransformArrayInObject(array, keys){
+    const candidate = {}
+
+    array.forEach((item, index)=>{
+        candidate[keys[index]] = item
     })
-    object["passwordCandidate"] = "123"
+    
+    candidate["passwordCandidate"] = "123"
+
+    return candidate
 }

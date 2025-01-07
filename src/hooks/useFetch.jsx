@@ -20,7 +20,6 @@ export function useFetch(url){
     }
 
     const postData = (data, method) => {
-        const test = JSON.stringify(data)
         if (method === "POST") {
             setConfig({
                 method,
@@ -31,17 +30,19 @@ export function useFetch(url){
             })
             setMethod(method)
         }
+        return console.log('Usuário adicionado com êxito!')
     }
 
     const postRequest = async ()=>{
         let json
         let fetchOptions = [url, config]
-
+        setLoading(true)
         if (method !== null){
             const res = await fetch(...fetchOptions)
             json = await res.json()
             setCallFetch(json)
         }
+        setLoading(false)
     }
 
     useEffect(()=>{
@@ -50,7 +51,7 @@ export function useFetch(url){
 
     useEffect(()=>{
         postRequest()
-    }, [config, url])
+    }, [config])
 
     return {data, postData, loading }
 }

@@ -1,4 +1,5 @@
 // STYLE CSS
+import { useEffect } from 'react'
 import '../css/ConfirmRegister.css'
 
 
@@ -7,9 +8,13 @@ import { useNavigate } from "react-router-dom"
 
 export function ConfirmRegister(){
     const navigate = useNavigate()
-    setTimeout(() => {
-        navigate("/")
-    }, 5000);
+    
+    useEffect(()=>{
+        setTimeout(() => {
+            navigate("/")
+        }, 5000);
+    },[])
+
     return (
         <div className='confirm-register'>
             <h1>Sucesso!!!</h1>

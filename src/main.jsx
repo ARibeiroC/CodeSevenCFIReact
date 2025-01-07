@@ -34,19 +34,19 @@ const router = createBrowserRouter([
         element: <Home />,
         children: [
           {
-            path: `/area-do-candidato`,
+            path: `/area-do-candidato/:id`,
             element: <HomePage />
           },
           {
-            path: `/area-do-candidato/project-cfi`,
+            path: `/area-do-candidato/:id/project-cfi`,
             element: <ProjectCfi />
           },
           {
-            path: `/area-do-candidato/events`,
+            path: `/area-do-candidato/:id/events`,
             element: <Events />
           },
           {
-            path: `/area-do-candidato/test`,
+            path: `/area-do-candidato/:id/test`,
             element: <DoTest />
           },
         ]

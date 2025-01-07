@@ -15,6 +15,8 @@ import {Container, FormStyled} from '../css/SignCSS'
 
 export function SignUp(){
     const [candidate, setCandidate] = useState([])
+    const [keys, setKeys] = useState([])
+
     const [registerCandidate, setRegisterCandidate] = useState('')
     const [nameComplete, setNameComplete] = useState('')
     const [emailCandidate, setEmailCandidate] = useState('')
@@ -26,14 +28,29 @@ export function SignUp(){
     const { validateInputNumber, validateInputText } = useValidate()
 
     const uri = import.meta.env.VITE_API_URL
-    const { postData } = useFetch(`${uri}/candidates`)
+    const { postData, loading } = useFetch(`${uri}/candidates`)
 
     const navigate = useNavigate()
-
+    
     const handleSubmit = (e)=>{
-        e.preventDefault()   
-        setCandidate([registerCandidate, nameComplete, emailCandidate, telephoneCandidate, nameResponsible, cellphoneResponsible])
-        navigate('/')
+        e.preventDefault()
+        const inputs = Array.from(e.target)
+        let inputValue = []
+        let inputKeys = []
+        inputs.forEach((item)=>{
+            if (item.name !== ""){
+                inputValue.push(item.value)
+                inputKeys.push(item.name)
+            }
+        })
+        setCandidate(inputValue)
+        setKeys(inputKeys)
+        // setRegisterCandidate('')
+        // setNameComplete('')
+        // setEmailCandidate('')
+        // setTelephoneCandidate('')
+        // setNameResponsible('')
+        // setcellphoneResponsible('')
     }
 
     const onChangeRegisterCandidate = (input)=>{
@@ -42,7 +59,6 @@ export function SignUp(){
     }
 
     const onChangeInputTelephoneCandidate = (input)=>{
-
         let update = validateInputNumber(input)
         setTelephoneCandidate(update)
         if (input.length === 11){
@@ -52,7 +68,6 @@ export function SignUp(){
     }
 
     const onChangeInputPhoneNumberResponsable = (input)=>{
-        
         let update = validateInputNumber(input)
         setcellphoneResponsible(update)
         if (input.length === 11){
@@ -60,7 +75,6 @@ export function SignUp(){
             setcellphoneResponsible(update)
         }
     }
-
 
     const onChangeInputsName = (input)=> {
         const textInput = input.value
@@ -72,81 +86,106 @@ export function SignUp(){
         }
     }
 
+    const candidateObject = useTransformArrayInObject(candidate, keys)
+
+    const isRegistred = false
+
+    const redirectPage = ()=>{
+        navigate('/ConfirmRegister')
+    }
+
 
     useEffect(()=>{
-        useTransformArrayInObject(candidate, postData)
+        if (candidate[0]){
+            postData(candidateObject, "POST")
+            setTimeout(()=>{
+                redirectPage()
+            }, 1000)
+        }
     }, [candidate])
 
     return (
         <Container>
             <h2>Sign Up</h2>
             <FormStyled onSubmit={handleSubmit}>
-                <label>
+                {/* <label>
                     <span>Matricula</span>
-                    <input
-                        type="text" 
-                        placeholder="Ex: 001234"
-                        value={registerCandidate}
-                        onChange={(e)=>{onChangeRegisterCandidate(e.target.value)}}
-                        maxLength={6}
-                        // required
-                        />
-                </label>
-                <label>
+                </label> */}
+                <input
+                    name="registerCandidate"
+                    type="text" 
+                    placeholder="Matricula"
+                    value={registerCandidate}
+                    onChange={(e)=>{onChangeRegisterCandidate(e.target.value)}}
+                    maxLength={6}
+                    required
+                />
+                {/* <label>
                     <span>Nome Completo</span>
-                    <input
-                        id='name-candidate'
-                        type="text"
-                        placeholder="Ex: José da Costa Filho" 
-                        value={nameComplete}
-                        onChange={(e)=>{onChangeInputsName(e.target)}}
-                        required
-                        />
-                </label>
-                <label>
+                </label> */}
+                <input
+                    name="nameComplete"
+                    id='name-candidate'
+                    type="text"
+                    placeholder="Nome Completo" 
+                    value={nameComplete}
+                    onChange={(e)=>{onChangeInputsName(e.target)}}
+                    required
+                />
+                {/* <label>
                     <span>E-mail</span>
-                    <input
-                        type="email"
-                        placeholder="Ex: primeironome@email.com"
-                        value={emailCandidate}
-                        onChange={(e)=>{setEmailCandidate(e.target.value)}}
-                        required
-                        />
-                </label>
-                <label>
+                </label> */}
+                <input
+                    name="emailCandidate"
+                    type="email"
+                    placeholder="E-Mail"
+                    value={emailCandidate}
+                    onChange={(e)=>{setEmailCandidate(e.target.value)}}
+                    required
+                />
+                {/* <label>
                     <span>Celular de Candidato</span>
-                    <input
-                        type="text"
-                        placeholder="(xx) 99999-0000"
-                        value={telephoneCandidate}
-                        maxLength={15}
-                        onChange={(e)=>{onChangeInputTelephoneCandidate(e.target.value)}}
-                        required
-                        />
-                </label>
-                <label>
+                </label> */}
+                <input
+                    name="telephoneCandidate"
+                    type="text"
+                    placeholder="Telefone"
+                    value={telephoneCandidate}
+                    maxLength={15}
+                    minLength={11}
+                    onChange={(e)=>{onChangeInputTelephoneCandidate(e.target.value)}}
+                    required
+                />
+                {/* <label>
                     <span>Nome do Responsável</span>
-                    <input
-                        id='name-reponsible'
-                        type="text"
-                        placeholder="Ex: José da Costa Filho"
-                        value={nameResponsible}
-                        onChange={(e)=>{onChangeInputsName(e.target)}}
-                        required
-                        />
-                </label>
-                <label>
+                </label> */}
+                <input
+                    name="nameResponsible"
+                    id='name-reponsible'
+                    type="text"
+                    placeholder="Nome completo do responsável"
+                    value={nameResponsible}
+                    onChange={(e)=>{onChangeInputsName(e.target)}}
+                    required
+                />
+                {/* <label>
                     <span>Celular do Responsável</span>
-                    <input
-                        type="text"
-                        placeholder="(xx) 99999-0000"
-                        value={cellphoneResponsible}
-                        maxLength={15}
-                        onChange={(e)=>{onChangeInputPhoneNumberResponsable(e.target.value)}}
-                        required
-                        />
-                </label>
-                <Button style='signup' text="Candidatar-se" />
+                </label> */}
+                <input
+                    name="cellphoneResponsible"
+                    type="text"
+                    placeholder="Telefone do responsável"
+                    value={cellphoneResponsible}
+                    maxLength={15}
+                    minLength={11}
+                    onChange={(e)=>{onChangeInputPhoneNumberResponsable(e.target.value)}}
+                    required
+                />
+                {loading ? (
+                    <Button wait={true} />
+                ) : (
+                    <Button text={"Candidatar-se"} />
+                )}
             </FormStyled>
         </Container>
     )

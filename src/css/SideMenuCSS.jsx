@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {breakpoints} from './Breackpoints'
+import { breakpoints } from './Breackpoints'
 
 export const Content = styled.div`
     display:none;
@@ -106,7 +106,7 @@ export const AreaControl = styled.div`
         color: var(--color-ice);
         z-index: 1;
         & input {
-            display: none;
+            // display: none;
         }
     }
 

@@ -20,9 +20,9 @@
 # ETAPAS
 
 ## RESPONSIVIDADE
-- [ ] Login
-- [ ] Cadastro
-- [ ] Área do candidato
+- [X] Login
+- [X] Cadastro
+- [X] Área do candidato
 - [ ] Prova
 
 ## Design

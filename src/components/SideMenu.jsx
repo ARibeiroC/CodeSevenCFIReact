@@ -10,7 +10,7 @@ import { useNavigate, NavLink } from 'react-router-dom'
 
 
 // HOOKS IMPORT
-import { useUserName } from "../hooks/useUserName";
+import { useUserData } from "../hooks/useUserData";
 import { useRef } from "react";
 
 
@@ -19,7 +19,6 @@ import { AreaControl, Container, Dialog, NavMenu } from "../css/SideMenuCSS";
 
 
 export function SideMenu(){
-    const navigate = useNavigate()
     const modal = useRef()
     const toggleMenu = useRef()
     const checkMenu = useRef()
@@ -45,7 +44,12 @@ export function SideMenu(){
         }
     }
 
-    const user = useUserName()
+    const [user, id] = useUserData()
+
+    function disableCheckboxForClickItemMenu(){
+        checkMenu.current.checked = false
+        handleShowMenu()
+    }
 
     return (
         <Container>
@@ -69,22 +73,22 @@ export function SideMenu(){
             <NavMenu ref={toggleMenu}>
                 <ul >
                     <li className="item-menu">
-                        <NavLink to="/area-do-candidato">
+                        <NavLink to={`/area-do-candidato/${id}`} onClick={()=>disableCheckboxForClickItemMenu()}>
                             HomePage<FaHouse className="icon" />
                         </NavLink>
                     </li>
                     <li className="item-menu">
-                        <NavLink to="/area-do-candidato/project-cfi">
+                        <NavLink to={`/area-do-candidato/${id}/project-cfi`} onClick={()=>disableCheckboxForClickItemMenu()}>
                             Projeto CFI<FaFileLines className="icon" />
                         </NavLink>
                     </li>
                     <li className="item-menu">
-                        <NavLink to="/area-do-candidato/events">
+                        <NavLink to={`/area-do-candidato/${id}/events`} onClick={()=>disableCheckboxForClickItemMenu()}>
                             Eventos<BsCalendar3EventFill className="icon" />
                         </NavLink>
                     </li>
                     <li className="item-menu">
-                        <NavLink to="/area-do-candidato/test">
+                        <NavLink to={`/area-do-candidato/${id}/test`} onClick={()=>disableCheckboxForClickItemMenu()}>
                             Prova<FaFilePen className="icon" />
                         </NavLink>
                     </li>
