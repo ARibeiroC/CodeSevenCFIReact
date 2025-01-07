@@ -1,11 +1,11 @@
 # PROJETO CFI (CURSOS DE FORMAÇÃO DE INSTRUTORES)
-## Este é um projeto FRONT-END desenvolvido para testar meus conhecimentos e claro obter experiência no desenvolvimento de uma aplicação simples com gestão de usuários. Ele é um teste de um projeto maior de ERP que estou desenvolvendo para uma escola de cursos profissionalizantes.
+## Este é um projeto FULLSTACK desenvolvido para testar meus conhecimentos e claro obter experiência no desenvolvimento de uma aplicação simples com gestão de usuários. Ele é um teste de um projeto maior de ERP que estou desenvolvendo para uma escola de cursos profissionalizantes.
 
 ## EM PROCESSO DE DESENVOLVIMENTO #
 
 <div>
-  <p>ACESSE:  <a href="https://aribeiroc.github.io/CodeSevenCFIReact/">https://aribeiroc.github.io/CodeSevenCFIReact/</a></p>
-  <img src="https://cdn.discordapp.com/attachments/1037246336669601812/1306845899401465898/image.png?ex=6746a716&is=67455596&hm=5b2651f4660a9085d2a508272f96441a32ad3ba51f1eb1fed0f91537dcdc8147&"
+  <p>ACESSE:  <a href="https://codesevenacademy.netlify.app/">https://codesevenacademy.netlify.app/</a></p>
+  <a href="https://ibb.co/k14gmy5"><img src="https://i.ibb.co/X87ZY4j/screen.png" alt="screen" border="0" /></a>
 </div>
 
 # TECNOLOGIAS
@@ -14,15 +14,15 @@
  <img align="center" alt="Ribeiro-JS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
  <img align="center" alt="Ribeiro-JS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg">
  <img align="center" alt="Ribeiro-JS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
- <img align="center" alt="Ribeiro-JS" height="30" width="30" src="https://dl.flathub.org/media/org/sqlitebrowser/sqlitebrowser/3c094fb8038e961ea106f2bf8c8318f5/icons/128x128@2/org.sqlitebrowser.sqlitebrowser.png">
+ <img align="center" alt="Ribeiro-JS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-plain-wordmark.svg">
 </div>
 
 # ETAPAS
 
 ## RESPONSIVIDADE
-- [X] Login
-- [X] Cadastro
-- [X] Área do candidato
+- [ ] Login
+- [ ] Cadastro
+- [ ] Área do candidato
 - [ ] Prova
 
 ## Design
